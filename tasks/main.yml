@@ -1,9 +1,11 @@
 ---
-- name: install cfssl, et. al.
-  become: yes
-  become_user: root
-  environment:
-    GOPATH: /usr/local
-  command: /usr/local/go/bin/go get -u github.com/cloudflare/cfssl/cmd/...
-  args:
-    creates: /usr/local/bin/cfssl
+- name: resolve platform specific vars
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+      - "{{ansible_distribution}}.yml"
+      - "{{ansible_os_family}}.yml"
+      skip: true
+
+- include: '{{cfssl_installer | default("build") }}.yml'

@@ -1,0 +1,9 @@
+---
+- name: install cfssl, et. al.
+  become: true
+  become_user: root
+  environment:
+    GOPATH: /usr/local
+  command: /usr/local/go/bin/go get -u github.com/cloudflare/cfssl/cmd/...
+  args:
+    creates: /usr/local/bin/cfssl
