@@ -9,18 +9,20 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 7
+        - all
     - name: Fedora
       versions:
-        - 23
+        - all
     - name: Ubuntu
       versions:
-        - trusty
-        - xenial
+        - all
+    - name: MacOSX
+      versions:
+        - all
+
   galaxy_tags:
-    - development
+    - cfssl
 
 dependencies:
   - role: andrewrothstein.go
-    version: v1.0.4
-  
+    version: v1.0.7

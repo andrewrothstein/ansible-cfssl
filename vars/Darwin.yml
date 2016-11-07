@@ -1,0 +1,5 @@
+---
+cfssl_privilege_escalation : False
+cfssl_installer : pkg
+cfssl_package_list:
+  - cfssl
