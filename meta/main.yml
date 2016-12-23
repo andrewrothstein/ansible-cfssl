@@ -31,8 +31,8 @@ galaxy_info:
 dependencies:
   - role: andrewrothstein.go-dev
     version: v1.0.3
-    go_escalate: True
-    go_get:
+    go_dev_escalate: True
+    go_dev_get:
       - github.com/cloudflare/cfssl/cmd/...
     
     
