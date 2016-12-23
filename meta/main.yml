@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs cfssl et. al. for the target user
+  description: installs cfssl
   company: BlackRock
   license:
     - MIT
@@ -16,15 +16,23 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Alpine
+      versions:
+        - all
     - name: MacOSX
       versions:
         - all
 
   galaxy_tags:
     - cfssl
-
+    - tls
+    - pki
+    
 dependencies:
-  - role: andrewrothstein.go
-    version: v2.0.0
-  - role: andrewrothstein.git
-    version: v3.0.0
+  - role: andrewrothstein.go-dev
+    version: v1.0.2
+    go_escalate: True
+    go_get:
+      - github.com/cloudflare/cfssl/cmd/...
+    
+    
