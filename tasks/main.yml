@@ -1,4 +1,2 @@
 ---
-- name: test cfssl
-  command: /usr/local/bin/cfssl --version
-  changed_when: False
+
