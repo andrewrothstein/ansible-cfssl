@@ -14,13 +14,8 @@ test:
     - ? | 
           circle-matrix <<"EHD"
             env:
-              - OS=alpine_3.3
-              - OS=alpine_3.4
-              - OS=alpine_edge
               - OS=centos_7
-              - OS=fedora_23
               - OS=fedora_24
-              - OS=ubuntu_trusty
               - OS=ubuntu_xenial
 
             before_script:

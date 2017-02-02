@@ -29,7 +29,7 @@ galaxy_info:
     - pki
     
 dependencies:
-  - role: spk83.go-dev
-    version: test-v1.0.6
+  - role: andrewrothstein.go-dev
+    version: v1.0.6
     go_dev_escalate: '{{ cfssl_privilege_escalation }}'
     go_dev_get: '{{ cfssl_go_dev_get }}'
