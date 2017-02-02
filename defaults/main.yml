@@ -4,6 +4,6 @@ cfssl_go_deps:
   - pkg: github.com/cloudflare/cfssl/cmd/cfssl
     target: cfssl
   - pkg: github.com/cloudflare/cfssl/cmd/cfssljson
-    target: cfssljsonf
+    target: cfssljson
   - pkg: github.com/cloudflare/cfssl/cmd/mkbundle
     target: mkbundle
