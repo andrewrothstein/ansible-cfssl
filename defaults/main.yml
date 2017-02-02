@@ -1,9 +1,5 @@
 ---
 # defaults file for cfssl
 cfssl_go_deps:
-  - pkg: github.com/cloudflare/cfssl/cmd/cfssl
+  - pkg: github.com/cloudflare/cfssl/cmd/...
     target: cfssl
-  - pkg: github.com/cloudflare/cfssl/cmd/cfssljson
-    target: cfssljson
-  - pkg: github.com/cloudflare/cfssl/cmd/mkbundle
-    target: mkbundle
