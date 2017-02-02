@@ -1,2 +1,5 @@
 ---
 # vars file for cfssl
+cfssl_privilege_escalation: '{% if ansible_os_family == "Darwin" %}False{% else %}True{% endif %}'
+
+cfssl_go_dev_get: '{% if ansible_os_family == "Darwin" %}[]{% else %}{{ cfssl_go_deps }}{% endif %}'
