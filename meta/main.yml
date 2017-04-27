@@ -27,6 +27,6 @@ galaxy_info:
     
 dependencies:
   - role: andrewrothstein.go-dev
-    version: v2.1.0
+    version: v2.1.1
     go_dev_escalate: '{{ cfssl_privilege_escalation }}'
     go_dev_get: '{{ cfssl_go_dev_get }}'
