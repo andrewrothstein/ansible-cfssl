@@ -16,6 +16,12 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Debian
+      versions:
+        - jessie
+    - name: Alpine
+      versions:
+        - all
     - name: MacOSX
       versions:
         - all
@@ -25,8 +31,4 @@ galaxy_info:
     - tls
     - pki
     
-dependencies:
-  - role: andrewrothstein.go-dev
-    version: v2.1.1
-    go_dev_escalate: '{{ cfssl_privilege_escalation }}'
-    go_dev_get: '{{ cfssl_go_dev_get }}'
+dependencies: []

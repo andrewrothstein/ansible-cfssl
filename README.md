@@ -1,8 +1,8 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-cfssl.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-cfssl)
 andrewrothstein.cfssl
 =====================
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-cfssl.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-cfssl)
 
-Installs [cfssl](https://github.com/cloudflare/cfssl)
+Installs assorted [cfssl](https://github.com/cloudflare/cfssl) tools.
 
 Requirements
 ------------

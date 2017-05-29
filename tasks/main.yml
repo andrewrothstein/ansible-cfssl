@@ -10,4 +10,4 @@
       paths:
         - '{{role_path}}/vars'
 
-- include: '{{cfssl_installer | default("build") }}.yml'
+- include: '{{cfssl_installer | default("download") }}.yml'

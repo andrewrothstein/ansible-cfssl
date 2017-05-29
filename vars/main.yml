@@ -1,5 +1,5 @@
 ---
 # vars file for cfssl
-cfssl_privilege_escalation: '{% if ansible_os_family == "Darwin" %}False{% else %}True{% endif %}'
+cfssl_url_prefix: '{{cfssl_mirror}}/R{{cfssl_ver}}'
 
-cfssl_go_dev_get: '{% if ansible_os_family == "Darwin" %}[]{% else %}{{ cfssl_go_deps }}{% endif %}'
+cfssl_install_dir: '{{cfssl_install_target}}/cfssl-{{cfssl_ver}}'
