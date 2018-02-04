@@ -14,7 +14,7 @@
   get_url:
     url: '{{cfssl_url_prefix}}/{{item}}_{{cfssl_platform}}'
     dest: '{{cfssl_install_dir}}/{{item}}'
-    checksum: '{{cfssl_checksums[cfssl_platform][item]}}'
+    checksum: '{{cfssl_checksums[cfssl_ver][item][cfssl_platform]}}'
     mode: 0755
 
 - name: link binaries...
