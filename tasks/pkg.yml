@@ -1,8 +1,8 @@
 ---
 - name: installing cfssl packages...
   become_user: root
-  become: '{{cfssl_privilege_escalation}}'
-  with_items: '{{cfssl_pkg_list |default([])}}'
+  become: '{{ cfssl_privilege_escalation }}'
+  with_items: '{{ cfssl_pkg_list | default([]) }}'
   package:
-    name: '{{item}}'
+    name: '{{ item }}'
     state: present
