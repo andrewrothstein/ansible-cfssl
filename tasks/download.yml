@@ -3,27 +3,25 @@
   become: yes
   become_user: root
   file:
-    path: '{{cfssl_install_dir}}'
+    path: '{{ cfssl_install_dir }}'
     state: directory
     mode: 0755
 
 - name: download binaries...
   become: yes
   become_user: root
-  with_items: '{{cfssl_binaries}}'
+  with_items: '{{ cfssl_binaries }}'
   get_url:
-    url: '{{cfssl_url_prefix}}/{{item}}_{{cfssl_platform}}'
-    dest: '{{cfssl_install_dir}}/{{item}}'
-    checksum: '{{cfssl_checksums[cfssl_ver][item][cfssl_platform]}}'
+    url: '{{ cfssl_url_prefix }}/{{ item }}_{{ cfssl_ver }}_{{ cfssl_platform }}'
+    dest: '{{ cfssl_install_dir }}/{{ item }}'
+    checksum: '{{ cfssl_checksums[cfssl_ver][item][cfssl_platform] }}'
     mode: 0755
 
 - name: link binaries...
   become: yes
   become_user: root
-  with_items: '{{cfssl_binaries}}'
+  with_items: '{{ cfssl_binaries }}'
   file:
-    src: '{{cfssl_install_dir}}/{{item}}'
-    dest: '{{cfssl_install_target}}/{{item}}'
+    src: '{{ cfssl_install_dir }}/{{ item }}'
+    dest: '{{ cfssl_install_target }}/{{ item }}'
     state: link
-
-  

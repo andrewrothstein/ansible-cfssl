@@ -3,3 +3,4 @@ cfssl_privilege_escalation: False
 cfssl_installer : pkg
 cfssl_pkg_list:
   - cfssl
+cfssl_os: darwin
