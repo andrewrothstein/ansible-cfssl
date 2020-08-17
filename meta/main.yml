@@ -30,5 +30,5 @@ galaxy_info:
     - cfssl
     - tls
     - pki
-    
+
 dependencies: []

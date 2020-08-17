@@ -39,4 +39,5 @@ dl_ver() {
         dl $ver $lchecksums $app windows amd64 .exe
     done
 }
+
 dl_ver ${1:-1.4.1}
