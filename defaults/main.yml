@@ -3,7 +3,7 @@
 cfssl_privilege_escalation: True
 cfssl_installer: download
 
-cfssl_ver: '1.4.1'
+cfssl_ver: 1.5.0
 cfssl_os: linux
 cfssl_arch: amd64
 cfssl_mirror: https://github.com/cloudflare/cfssl/releases/download
@@ -136,3 +136,61 @@ cfssl_checksums:
       linux_amd64: sha256:f608743fe19db77593c3ba326eea7baa7f98fef2fe0cd70261e92883d0f6bf26
       # https://github.com/cloudflare/cfssl/releases/download/v1.4.1/multirootca_1.4.1_windows_amd64.exe
       windows_amd64: sha256:5737fb169fb6e9aec581371bae994b7c8ec6810628f138613d9d2debf75db420
+  # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl_1.5.0_checksums.txt
+  '1.5.0':
+    cfssl-bundle:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-bundle_1.5.0_darwin_amd64
+      darwin_amd64: sha256:70f550ae1e9534c0a98ea621040ef3407635455d7cd8757549d3f0239ac4e3bd
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-bundle_1.5.0_linux_amd64
+      linux_amd64: sha256:133633a894e83356ba9f0a12af23c9b11420024df3b4b8196a1538e458f9547e
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-bundle_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:3ecc18c7e168d611d63f84d63778a8c629b4223718d02094e4e8124cfc18440a
+    cfssl-certinfo:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-certinfo_1.5.0_darwin_amd64
+      darwin_amd64: sha256:51afebf55b1c80c71fd9ccd658d72689f6af7e22a9a43547640b96d0e269a3a0
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-certinfo_1.5.0_linux_amd64
+      linux_amd64: sha256:bbc0d9f3bd29279d488b884cb4ff097bfe8b6149320d8b4a39b7a19e63bb1e30
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-certinfo_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:17282aba7a47205be7b937b541af1f33f75654afc66d3a54081a23a20273ad14
+    cfssl-newkey:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-newkey_1.5.0_darwin_amd64
+      darwin_amd64: sha256:6a0cda872042486af6b1cf17c84a966862bf519965c0cf3a79fe7e0c93a97d9f
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-newkey_1.5.0_linux_amd64
+      linux_amd64: sha256:f936890ac1d53c0a088227c21834b638c8c42a96ffbb19377dac6d1b1163f01b
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-newkey_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:39cb0f739fec07ae8b16d3fd7e07929656748a1eb5b12e0632d1864282eb5d76
+    cfssl-scan:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-scan_1.5.0_darwin_amd64
+      darwin_amd64: sha256:c1e5e632cfd276994410a428c2e5d75b9599d3e42d14efefe17cfb04cfdcb179
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-scan_1.5.0_linux_amd64
+      linux_amd64: sha256:3566a1ef1df2a1e53e1c7f218ebd239b0f93ba6fa52df899d37dd9c3c7f8a5f0
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl-scan_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:0e7371833942508e939beb051c09aa4112f3e4743460d549d23f8aace5ab0239
+    cfssljson:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssljson_1.5.0_darwin_amd64
+      darwin_amd64: sha256:52d38ba7f3b90f2ca198899ecf3bf6c2094c75cb777cd12eccf7fa4201fa7d16
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssljson_1.5.0_linux_amd64
+      linux_amd64: sha256:3d33ef410313ca242ebdae1d9092447a8b02681a2b6d21d0a272f6e8d6d5191e
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssljson_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:6fd4776e044489f1858ed33e7cfe09728396f1d01e5d5d5934b78c7ab5cddab9
+    cfssl:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl_1.5.0_darwin_amd64
+      darwin_amd64: sha256:231daed4f70ddaea6eb7ba98ba0c5cff9309efa0518b23fe4fa724ff6b6d3876
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl_1.5.0_linux_amd64
+      linux_amd64: sha256:d5cea17ec190dd19ea300366c6fd7d2b41c8d9a599b30be79c290d1477f82c68
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/cfssl_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:fce669f20d9f25dce20e4a39742613434e16c444ef5745aa91e546223031dbd5
+    mkbundle:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/mkbundle_1.5.0_darwin_amd64
+      darwin_amd64: sha256:222af49c62dd10b69661b7faef67756dda3627d5e1beaf470c818faec8e64b6c
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/mkbundle_1.5.0_linux_amd64
+      linux_amd64: sha256:063205119fa8a263b6c8d5f2da55cba3e80a62e31ed3ab033a01babae4e06e2c
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/mkbundle_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:aa3c8c84ac3c0e8ff69d798a01ea25fdd15934b92f7979c9c1cebca845446f7e
+    multirootca:
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/multirootca_1.5.0_darwin_amd64
+      darwin_amd64: sha256:1eb0e08066576079b27b2b915355a6963de2f5ba8874f2c3e16b7351f0a6f3e3
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/multirootca_1.5.0_linux_amd64
+      linux_amd64: sha256:fc2693ebfbf498b136caf0aea3920bc7398e16a5192fea90346573323d4f94ef
+      # https://github.com/cloudflare/cfssl/releases/download/v1.5.0/multirootca_1.5.0_windows_amd64.exe
+      windows_amd64: sha256:cea263e6e58aa20d924bc5f04aa67882a5a1660a2d05d473a192efdf8648b066
