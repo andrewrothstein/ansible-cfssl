@@ -28,6 +28,11 @@ galaxy_info:
     - name: Gentoo
       versions:
         - all
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - xenial
     - name: MacOSX
       versions:
         - all
