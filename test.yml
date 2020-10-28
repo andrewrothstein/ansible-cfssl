@@ -1,8 +1,10 @@
 ---
 - hosts: all
   roles:
-    - role: '{{playbook_dir}}'
+    - role: '{{ playbook_dir }}'
   tasks:
     - name: test cfssl
-      command: '/usr/local/bin/cfssl version'
-      changed_when: False
+      command: /usr/local/bin/cfssl version
+      register: cfssl_test_output
+    - debug:
+        msg: '{{ cfssl_test_output.stdout }}'
