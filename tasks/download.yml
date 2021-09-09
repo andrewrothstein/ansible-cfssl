@@ -1,5 +1,5 @@
 ---
-- name: make install dir...
+- name: mkdir -p {{ cfssl_install_dir }}...
   become: yes
   become_user: root
   file:
@@ -7,7 +7,7 @@
     state: directory
     mode: 0755
 
-- name: download binaries...
+- name: downloading binaries from {{ cfssl_url_prefix }}...
   become: yes
   become_user: root
   with_items: '{{ cfssl_binaries }}'
@@ -17,7 +17,7 @@
     checksum: '{{ cfssl_checksums[cfssl_ver][item][cfssl_platform] }}'
     mode: 0755
 
-- name: link binaries...
+- name: linking to binaries in {{ cfssl_install_dir }} from {{ cfssl_install_target }}...
   become: yes
   become_user: root
   with_items: '{{ cfssl_binaries }}'
