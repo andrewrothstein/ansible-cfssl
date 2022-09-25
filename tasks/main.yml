@@ -9,5 +9,4 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-
 - include_tasks: '{{ cfssl_installer | default("download")  }}.yml'

@@ -1,6 +1,6 @@
 ---
 - name: mkdir -p {{ cfssl_install_dir }}...
-  become: yes
+  become: true
   become_user: root
   file:
     path: '{{ cfssl_install_dir }}'
@@ -8,7 +8,7 @@
     mode: 0755
 
 - name: downloading binaries from {{ cfssl_url_prefix }}...
-  become: yes
+  become: true
   become_user: root
   with_items: '{{ cfssl_binaries }}'
   get_url:
@@ -18,7 +18,7 @@
     mode: 0755
 
 - name: linking to binaries in {{ cfssl_install_dir }} from {{ cfssl_install_target }}...
-  become: yes
+  become: true
   become_user: root
   with_items: '{{ cfssl_binaries }}'
   file:

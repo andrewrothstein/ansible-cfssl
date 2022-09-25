@@ -1,7 +1,7 @@
 ---
-cfssl_platform: '{{ cfssl_os }}_{{ cfssl_arch }}'
-
 # vars file for cfssl
+cfssl_os: '{{ ansible_system | lower }}'
+cfssl_arch: '{{ cfssl_arch_map[ansible_architecture] }}'
+cfssl_platform: '{{ cfssl_os }}_{{ cfssl_arch }}'
 cfssl_url_prefix: '{{ cfssl_mirror }}/v{{ cfssl_ver }}'
-
 cfssl_install_dir: '{{ cfssl_install_target }}/cfssl-{{ cfssl_ver }}'
