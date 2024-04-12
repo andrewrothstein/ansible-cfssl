@@ -3,8 +3,10 @@
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: /usr/local/bin/cfssl version
+    - name: Executing 'cfssl version'
+      ansible.builtin.command: /usr/local/bin/cfssl version
+      changed_when: false
       register: cfssl_test_output
-    - name: cfssl version
-      debug:
+    - name: Output of 'cfssl version'
+      ansible.builtin.debug:
         msg: '{{ cfssl_test_output.stdout }}'
