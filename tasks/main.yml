@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -9,4 +9,5 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- include_tasks: '{{ cfssl_installer | default("download")  }}.yml'
+- name: Using {{ cfssl_installer | default("download") }} installer
+  ansible.builtin.include_tasks: '{{ cfssl_installer | default("download") }}.yml'

@@ -1,7 +1,7 @@
 ---
-- name: installing cfssl packages...
+- name: Installing cfssl packages...
   become_user: root
   become: '{{ cfssl_privilege_escalation }}'
-  package:
+  ansible.builtin.package:
     name: '{{ cfssl_pkg_list | default([]) }}'
     state: present

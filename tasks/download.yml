@@ -1,27 +1,27 @@
 ---
-- name: mkdir -p {{ cfssl_install_dir }}...
+- name: Mkdir -p {{ cfssl_install_dir }}...
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     path: '{{ cfssl_install_dir }}'
     state: directory
-    mode: 0755
+    mode: '755'
 
-- name: downloading binaries from {{ cfssl_url_prefix }}...
+- name: Downloading binaries from {{ cfssl_url_prefix }}...
   become: true
   become_user: root
   with_items: '{{ cfssl_binaries }}'
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ cfssl_url_prefix }}/{{ item }}_{{ cfssl_ver }}_{{ cfssl_platform }}'
     dest: '{{ cfssl_install_dir }}/{{ item }}'
     checksum: '{{ cfssl_checksums[cfssl_ver][item][cfssl_platform] }}'
-    mode: 0755
+    mode: '755'
 
-- name: linking to binaries in {{ cfssl_install_dir }} from {{ cfssl_install_target }}...
+- name: Linking to binaries in {{ cfssl_install_dir }} from {{ cfssl_install_target }}...
   become: true
   become_user: root
   with_items: '{{ cfssl_binaries }}'
-  file:
+  ansible.builtin.file:
     src: '{{ cfssl_install_dir }}/{{ item }}'
     dest: '{{ cfssl_install_target }}/{{ item }}'
     state: link

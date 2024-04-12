@@ -1,15 +1,20 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs cfssl
   company: BlackRock
+  description: installs cfssl
+  galaxy_tags:
+    - cfssl
+    - tls
+    - pki
   license: MIT
-  min_ansible_version: 2.0
+  min_ansible_version: '2.0'
+  namespace: andrewrothstein
   platforms:
     - name: Alpine
       versions:
         - all
-    - name: Archlinux
+    - name: ArchLinux
       versions:
         - all
     - name: Debian
@@ -18,21 +23,14 @@ galaxy_info:
         - bullseye
     - name: EL
       versions:
-        - 8
-        - 9
+        - '8'
+        - '9'
     - name: Fedora
       versions:
-        - 38
-        - 39
-    - name: MacOSX
-      versions:
-        - all
+        - '38'
+        - '39'
     - name: Ubuntu
       versions:
         - focal
         - jammy
-  galaxy_tags:
-    - cfssl
-    - tls
-    - pki
   role_name: cfssl
